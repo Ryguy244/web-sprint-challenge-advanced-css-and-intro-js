@@ -274,12 +274,13 @@ console.log(get20s(artists));
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(miscArray, index) {
+    let diminished = miscArray.splice(index, 1);
+    return (miscArray.length);
   }
-  
-  /**
-
+  // console.log(removeArtist(artists, 3));
+  // console.log(removeArtist(artists, 4));
+  // console.log(removeArtist(artists, 5));
 
 
 
@@ -294,12 +295,17 @@ nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) 
 
 At the end, this function should console.log() the new array with information added"*/
-
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+const myself = {
+  Identification: 24,
+  Name: 'Ryan Clark',
+  Email: 'rbclark',
+  Bio: 'This is a sentence. This is also a sentence.',
+};
+function addArtist(newArray){
+return artists.push(newArray);
   }
+  addArtist(myself);
+  console.log(artists[20]);
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -309,11 +315,18 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
-}
+function lotsOfArt(artistsArray){
+    let prolific = [];
+    let minPaint = 100;
+    for(let elements of artistsArray) {
+    if (elements['paintings'] > minPaint) {
+      prolific.push(elements['name'])
+    } else {
+    }
+    }
+    return prolific;
+  }
+  console.log(lotsOfArt(artists));
 
 
 
