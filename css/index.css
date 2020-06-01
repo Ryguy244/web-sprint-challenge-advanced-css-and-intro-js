@@ -146,6 +146,9 @@ button:hover{
     h1 {
         font-size: 3.5rem;
     }
+    button {
+        padding: 0% 3%;
+    }
     .artists-container {
         display: flex;
         flex-direction: column;
