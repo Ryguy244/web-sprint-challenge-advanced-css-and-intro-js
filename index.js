@@ -238,9 +238,12 @@ console.log(correction);
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    /* code here */
+function getArtistByIndex(id, arrayName) {
+    let indexed = arrayName[id];
+    let person = arrayName[id]['name'];
+    return `The artist at ${id} is ${arrayName[id]['name']}.`
   }
+  console.log(getArtistByIndex(0, artists))
   
   /**
 
