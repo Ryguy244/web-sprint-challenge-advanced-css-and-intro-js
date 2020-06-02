@@ -23,10 +23,24 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. How would you describe preprocessing to someone new to CSS?
+
+They are CSS but upgraded. Once someone gets more familiar with CSS, and especially if they are coming from a programming language, they start to see the limitations of vanilla CSS. Preprocessors add a lot of convenient elements to CSS, like mixins and variables. But that's complicated. In the fewest number of words, it is CSS 2.0.
+
 2. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+My favorite concept in preprocessing is variables. Once you start using them, you can't live without them anymore. The time saved becomes incalculable all too quickly. Mix-ins were a close second, but they are also the most difficult. They are like very technical super variables, and it was difficult to throw them in to a project that didn't really need it. I can't imagine how much time they save over the course of a long project, expecially with a team that is sharing their mix-ins
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+Do you know the quadratic formula? It's tedious. Instead of writing it every time, we can save the quadratic formula to something we can bear repeating throughout our code. let quadFormu = blah blah. Now, whenever we want to reference the QF, we use quadFormu instead. It's a powerful concept, but you really only see that once you start programming. If you ever get confused by it, think "storing values in a convenient box".
+
 4. What is the purpose of using functions in code?
+
+Like variables, functions make our lives easier. Unlike variabables, functions actually do things. They make things move, run our calculators and every process you can think of. We don't necessarily need a function to run a process, but processes are stored in functions for conveneience (so we can repeat them) and to save memory for the computer. We can do a ton of complicated math and save it a thousand times on our computer, or we can do it once, and save the location of the math in our computer for future reference. 
+
 5. What is JSON data?
+
+JSON data (Javascript Object Notation) is a file format used to transmit data. It's human readable in the form of attirbute value paris and array data types. I think it is mostly for servers though.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 

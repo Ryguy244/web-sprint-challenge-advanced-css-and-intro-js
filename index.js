@@ -208,11 +208,27 @@ const artists = [
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
 
+ console.log(artists[0]['name'])
+
+// function nameFinder(object, index) {
+//   indexed = object[index];
+//   return (indexed['name'])
+// }
+// console.log(nameFinder(artists, 0));
+
+console.log(artists[2]['bio'])
+
+// function bioFinder(object, index) {
+//   indexed = object[index];
+//   return (indexed['bio'])
+// }
+// console.log(bioFinder(artists, 2));
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-
+let correction = (artists[8]['name'] = 'Vincent Van Gogh');
+console.log(correction);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -222,20 +238,30 @@ const artists = [
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    /* code here */
+function getArtistByIndex(id, arrayName) {
+    let indexed = arrayName[id];
+    let person = arrayName[id]['name'];
+    return `The artist at ${id} is ${arrayName[id]['name']}.`
   }
+  console.log(getArtistByIndex(0, artists))
   
   /**
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1900-2000) */
 
-function get20s(/* Code here */){
-
-  /* Code here */
-
+function get20s(data){
+  let icons = [];
+  let minYear = '1900';
+  for(let elements of data) {
+  if (elements['years'] > minYear) {
+    icons.push(elements['name'])
+  } else {
+  }
+  }
+  return icons;
 }
+console.log(get20s(artists));
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -248,12 +274,13 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(miscArray, index) {
+    let diminished = miscArray.splice(index, 1);
+    return (miscArray.length);
   }
-  
-  /**
-
+  // console.log(removeArtist(artists, 3));
+  // console.log(removeArtist(artists, 4));
+  // console.log(removeArtist(artists, 5));
 
 
 
@@ -268,12 +295,17 @@ nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) 
 
 At the end, this function should console.log() the new array with information added"*/
-
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+const myself = {
+  Identification: 24,
+  Name: 'Ryan Clark',
+  Email: 'rbclark',
+  Bio: 'This is a sentence. This is also a sentence.',
+};
+function addArtist(newArray){
+return artists.push(newArray);
   }
+  addArtist(myself);
+  console.log(artists[20]);
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -283,11 +315,18 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
-}
+function lotsOfArt(artistsArray){
+    let prolific = [];
+    let minPaint = 100;
+    for(let elements of artistsArray) {
+    if (elements['paintings'] > minPaint) {
+      prolific.push(elements['name'])
+    } else {
+    }
+    }
+    return prolific;
+  }
+  console.log(lotsOfArt(artists));
 
 
 
@@ -331,3 +370,9 @@ function randomize(/* Code here */){
 
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+// function ageRange(list) {
+//   return list['years'] > '18'
+// }
+// let filtered = (artists.filter)(ageRange(artists))
+
+//  console.log(filtered);
